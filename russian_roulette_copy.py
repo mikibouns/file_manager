@@ -49,21 +49,23 @@ def rotate_pistol(base_x, base_y, start):
     draw_circle('brown', 20)
     return  i % 7
 
-drow_pistol(100, 100)
+def main():
+    drow_pistol(100, 100)
 
-end_text = False
-start = 0
-answer = ''
-while answer != 'n':
-    answer = turtle.textinput("Russian roulette", "let's play? y/n")
-    if answer == 'y':
-        start = rotate_pistol(100, 100, start)
-        if start == 0:
-            end_text = "You lose!"
-            file_manager.dupl_all_files()
-        else:
-            end_text = "Lucky you!"
+    end_text = False
+    start = 0
+    answer = ''
+    while answer != 'n':
+        answer = turtle.textinput("Russian roulette", "let's play? y/n")
+        if answer == 'y':
+            start = rotate_pistol(100, 100, start)
+            if start == 0:
+                end_text = "You lose!"
+                file_manager.dupl_all_files()
+            else:
+                end_text = "Lucky you!"
 
-        final_text(end_text, 55, 300)
+            final_text(end_text, 55, 300)
 
-
+if __name__ == "__main__":
+    main()
