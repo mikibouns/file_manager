@@ -28,3 +28,6 @@ while answer != 'n':
             turtle.circle(int(radius))
             color_selection(color)
         turtle.end_fill()   # в конце закрашиваемого объекта
+
+if __name__ == "__main__":
+    pass
