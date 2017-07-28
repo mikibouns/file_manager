@@ -1,3 +1,7 @@
 конфликт: будем решать
 hello
 
+class Suka_blia():
+    def __init__(self):
+	pass
+
