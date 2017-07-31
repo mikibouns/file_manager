@@ -46,3 +46,16 @@ def stable_func():
 # stable_func_decorated = my_simple_decorator(stable_func)
 res_stable_func = stable_func()
 print(res_stable_func)
+
+def decorator_with_arg(func):
+    def wrapper_with_arg(*args, **kwargs):
+        print("Мы получили", args)
+        func(*args, **kwargs)
+    return wrapper_with_arg
+
+@decorator_with_arg
+def print_full_name(first_name, last_name):
+    print("Меня зовут", first_name)
+    print("Моя фамилия", last_name)
+
+print_full_name("Игорь", "Матиек")
